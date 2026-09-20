@@ -68,29 +68,30 @@
     .top-nav-left {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       font-weight: 700;
-      font-size: 16px;
+      font-size: 15px;
       color: var(--muted-charcoal);
     }
 
     .top-badge {
       background: var(--fog-blue);
       color: var(--soft-denim);
-      padding: 5px 12px;
+      padding: 4px 10px;
       border-radius: 8px;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
+      flex-shrink: 0;
     }
 
     .top-nav-right {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 12px;
     }
 
     .nav-sub-text {
-      font-size: 13.5px;
+      font-size: 13px;
       color: #64748b;
     }
 
@@ -98,18 +99,18 @@
       background: var(--denim-gradient);
       color: white;
       border: none;
-      padding: 10px 20px;
+      padding: 9px 16px;
       border-radius: 50px;
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 700;
       cursor: pointer;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       box-shadow: 0 4px 15px rgba(74, 95, 126, 0.2);
       transition: all 0.25s ease;
-      overflow: hidden;
       white-space: nowrap;
+      flex-shrink: 0;
     }
     .action-badge-btn:hover {
       background: var(--denim-hover-gradient);
@@ -131,6 +132,7 @@
       margin-bottom: 6px;
       letter-spacing: -0.5px;
       color: var(--muted-charcoal);
+      word-break: keep-all;
     }
 
     header h2.sub-title {
@@ -146,6 +148,7 @@
       font-weight: 400;
       margin-bottom: 12px;
       color: var(--muted-charcoal);
+      word-break: keep-all;
     }
 
     header .creator-tag {
@@ -196,6 +199,7 @@
       font-weight: 500;
       color: var(--muted-charcoal);
       margin-bottom: 35px;
+      word-break: keep-all;
     }
 
     .input-box-custom {
@@ -364,6 +368,7 @@
       font-weight: 700;
       margin-bottom: 14px;
       color: var(--muted-charcoal);
+      word-break: keep-all;
     }
 
     .info-box {
@@ -375,6 +380,7 @@
       color: var(--soft-denim);
       line-height: 1.6;
       margin-bottom: 26px;
+      word-break: keep-all;
     }
 
     .question-item {
@@ -387,6 +393,7 @@
       font-weight: 500;
       margin-bottom: 10px;
       color: var(--muted-charcoal);
+      word-break: keep-all;
     }
 
     .scale-group {
@@ -443,6 +450,7 @@
       font-size: 14px;
       line-height: 1.8;
       color: var(--muted-charcoal);
+      word-break: keep-all;
     }
 
     .cbt-container {
@@ -493,6 +501,7 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      word-break: keep-all;
     }
 
     .legend-color-box {
@@ -500,6 +509,7 @@
       height: 12px;
       border-radius: 3px;
       display: inline-block;
+      flex-shrink: 0;
     }
 
     .scenario-select-wrapper {
@@ -512,7 +522,7 @@
       padding: 15px 45px 15px 18px;
       border: 2px solid var(--soft-denim);
       border-radius: 12px;
-      font-size: 14.5px;
+      font-size: 14px;
       background: var(--fog-blue);
       color: var(--muted-charcoal);
       font-weight: 700;
@@ -635,16 +645,16 @@
     }
 
     .breath-bubble {
-      width: 140px;
-      height: 140px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       background: radial-gradient(circle, #93b5cf, #4A5F7E);
-      margin: 0 auto 24px;
+      margin: 0 auto 20px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #ffffff;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 700;
       box-shadow: 0 0 25px rgba(74, 95, 126, 0.3);
       transition: transform 4s ease-in-out;
@@ -725,6 +735,7 @@
       margin-bottom: 30px;
       white-space: pre-line;
       text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      word-break: keep-all;
     }
 
     .outro-cta-wrap {
@@ -865,6 +876,81 @@
       margin-bottom: 4px;
       color: var(--muted-charcoal);
     }
+
+    /* 🔥 [모바일 전용 최적화 반응형 미디어쿼리 (640px 이하)] */
+    @media (max-width: 639px) {
+      body {
+        padding: 0;
+        overflow-x: hidden;
+      }
+
+      .container {
+        width: 100%;
+        border-radius: 0;
+        border: none;
+      }
+
+      .top-nav-bar {
+        padding: 12px 16px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+      }
+
+      .top-nav-left {
+        justify-content: space-between;
+        font-size: 14px;
+      }
+
+      .top-nav-right {
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .nav-sub-text {
+        font-size: 12px;
+      }
+
+      .action-badge-btn {
+        padding: 7px 14px;
+        font-size: 12px;
+      }
+
+      header {
+        padding: 28px 16px;
+      }
+
+      header h1 {
+        font-size: 21px;
+      }
+
+      .step-nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 12px 16px;
+        gap: 8px;
+      }
+
+      .step-card {
+        padding: 10px 6px;
+      }
+
+      .step-card .step-title {
+        font-size: 11px;
+      }
+
+      .content-section {
+        padding: 24px 16px;
+      }
+
+      /* 모바일에서 CBT 안내 박스 텍스트가 잘리지 않고 자연스럽게 2줄로 줄바꿈되도록 처리 */
+      #cbt-notice {
+        white-space: normal !important;
+        height: auto !important;
+        padding: 12px 14px !important;
+        font-size: 12.5px !important;
+        line-height: 1.5 !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -874,8 +960,10 @@
   <!-- 상단 네비게이션 바 (고정) -->
   <nav class="top-nav-bar">
     <div class="top-nav-left">
-      <span class="top-badge">쉼</span>
-      <span>내 마음의 바운더리 센터</span>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span class="top-badge">쉼</span>
+        <span>내 마음의 바운더리 센터</span>
+      </div>
     </div>
     <div class="top-nav-right">
       <span class="nav-sub-text">잠시 숨을 고르는 곳</span>
@@ -1070,7 +1158,7 @@
         <button type="button" class="therapy-btn" onclick="switchTherapy('safeplace')">5. 안전지대 시각화</button>
       </div>
 
-      <!-- Therapy 1: 4-7-8 Breathing (이완 호흡 기능 정상 복구 완료) -->
+      <!-- Therapy 1: 4-7-8 Breathing -->
       <div id="th-breath" class="therapy-panel active">
         <h3 style="font-size: 15px; margin-bottom: 8px;">🫁 4-7-8 부교감신경 이완 호흡</h3>
         <p style="font-size: 12.5px; color: #64748b; margin-bottom: 15px;">코로 흡기(4초) ➔ 숨 멈추기(7초) ➔ 입으로 호기(8초) 사이클을 타이머와 함께 실천하세요.</p>
@@ -1617,7 +1705,7 @@
     box.scrollIntoView({ behavior: 'smooth' });
   }
 
-  // 5. Tab 4: Multi-Therapy Switch & Interactive features (이완 호흡 함수 정상 복구 완료)
+  // 5. Tab 4: Multi-Therapy Switch & Interactive features
   function switchTherapy(id) {
     document.querySelectorAll('.therapy-btn').forEach(b => b.classList.remove('active'));
     document.querySelectorAll('.therapy-panel').forEach(p => p.classList.remove('active'));
