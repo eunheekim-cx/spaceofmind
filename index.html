@@ -982,7 +982,7 @@
         창가로 들어오는 햇살처럼 복잡한 문제의 실체를 투명하게 바라보는 공간입니다. 나 혼자 뒤집어쓴 짐에서 외부 변수들을 분리해 봅니다.
       </div>
 
-      <!-- 🔥 [연한 푸른색 박스 + 한 줄 고정 + 링크만 클릭 가능] -->
+      <!-- 🔥 [한 줄 고정 + 간결해진 링크 문구: [클릭하여 CBT 분석 근거 확인]] -->
       <div id="cbt-notice" style="background: #f0f7ff; border: 1.5px dashed #93c5fd; padding: 14px 18px; border-radius: 12px; font-size: 13.5px; text-align: center; margin-bottom: 24px; color: #1e3a8a; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
         💡 진단 점수 연동 완료: 전체 업무 문제 요인 중 나의 실제 과실 비중은 <strong>14%</strong>로 보정되었습니다. 
         <span onclick="openCbtModal()" style="color: #2563eb; text-decoration: underline; font-weight: 700; cursor: pointer; margin-left: 6px;">[클릭하여 CBT 분석 근거 확인]</span>
@@ -1765,11 +1765,73 @@
     window.location.reload();
   }
 
+  // 🔥 [공유 기능 업그레이드]: 브라우저 기본 알림 대신 눈에 보이는 공유 모달 팝업 오픈
   function shareResult() {
-    alert("결과 링크가 클립보드에 복사되었습니다. 소중한 이에게 쉼표를 선물해 보세요!");
+    const shareUrl = window.location.href;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(shareUrl).then(() => {
+        openShareModal(shareUrl);
+      }).catch(() => {
+        fallbackCopyTextToClipboard(shareUrl);
+      });
+    } else {
+      fallbackCopyTextToClipboard(shareUrl);
+    }
+  }
+
+  function fallbackCopyTextToClipboard(text) {
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+    textArea.style.position = "fixed";  // 화면 스크롤 방지
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    try {
+      document.execCommand('copy');
+      openShareModal(text);
+    } catch (err) {
+      alert("링크 복사에 실패했습니다.");
+    }
+    document.body.removeChild(textArea);
+  }
+
+  function openShareModal(url) {
+    document.getElementById('share-url-input').value = url;
+    document.getElementById('share-modal').classList.add('active');
+  }
+
+  function closeShareModal() {
+    document.getElementById('share-modal').classList.remove('active');
+  }
+
+  function copyInputUrl() {
+    const copyText = document.getElementById('share-url-input');
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value).then(() => {
+      alert("링크가 클립보드에 복사되었습니다!");
+    });
   }
 
   loadScenario();
 </script>
 </body>
 </html>
+
+<!-- 🔥 [소중한 이에게 쉼표 선물하기 전용 공유 팝업 모달] -->
+<div class="modal-overlay" id="share-modal">
+  <div class="modal-card" style="text-align: center;">
+    <div style="font-size: 36px; margin-bottom: 10px;">🎁</div>
+    <div class="modal-title">소중한 이에게 쉼표 선물하기</div>
+    <div class="modal-sub">결과 링크가 클립보드에 복사되었습니다.<br>아래 주소를 복사하여 동료나 지인에게 공유해 보세요.</div>
+    
+    <div style="display: flex; gap: 8px; margin-bottom: 20px;">
+      <input type="text" id="share-url-input" readonly style="flex: 1; padding: 12px 14px; border: 1px solid var(--border-color); border-radius: 10px; background: #f8fafc; font-size: 13px; color: #334155; outline: none;">
+      <button type="button" onclick="copyInputUrl()" style="background: var(--soft-denim); color: white; border: none; padding: 0 16px; border-radius: 10px; font-size: 13px; font-weight: 700; cursor: pointer;">복사</button>
+    </div>
+
+    <div class="modal-btn-wrap">
+      <button type="button" class="submit-btn" style="margin-top: 0; max-width: 100%; background: var(--soft-denim);" onclick="closeShareModal()">확인 완료</button>
+    </div>
+  </div>
+</div>
