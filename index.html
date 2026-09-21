@@ -1434,14 +1434,26 @@
         <div class="legend-wrapper" id="legend-list"></div>
       </div>
 
-      <!-- 왜 이런 보고서가 나왔는지 확인할 수 있는 상위 3대 책임 재구조화 상세 리포트 카드 -->
-      <div style="margin-top: 30px;">
-        <h3 style="font-size: 16px; font-weight: 700; color: var(--soft-denim); margin-bottom: 12px;">
+      <!-- 상위 3대 책임 재구조화 상세 리포트 카드 (부가 설명 및 직관적 가이드 추가) -->
+      <div style="margin-top: 32px;">
+        <h3 style="font-size: 17px; font-weight: 700; color: var(--soft-denim); margin-bottom: 8px;">
           상위 취약 직무 변수 책임 재구조화 가이드
         </h3>
-        <p style="font-size: 13px; color: #64748b; margin-bottom: 14px;">
-          진단 결과 가장 높은 부하를 유발한 변수들에 대해 [조직의 구조적 결함]과 [나의 심리적 보호 경계]를 분리해 안내합니다.
-        </p>
+
+        <!-- 처음 접하는 분들을 위한 직관적인 부가 설명 상자 -->
+        <div style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 14px; padding: 16px 18px; margin-bottom: 18px; line-height: 1.7; font-size: 13.5px; color: #334155;">
+          <div style="font-weight: 800; font-size: 14.5px; color: #1e3a8a; margin-bottom: 6px;">
+            “지금 겪는 고통은 당신이 부족해서가 아니라 회사의 시스템 문제입니다.”
+          </div>
+          <div>
+            번아웃을 겪는 직장인들은 흔히 <em>‘내가 일을 못해서’, ‘내가 너무 예민해서’</em>라며 스스로를 탓하곤 합니다. 하지만 회사를 당장 바꿀 수 없다면, <strong>회사의 몫(시스템의 문제)</strong>과 <strong>나의 몫(내 마음을 지키는 태도)</strong>을 명확히 구분하여 나 자신을 지키는 단단한 선을 그어야 합니다.
+          </div>
+          <div style="margin-top: 8px; font-size: 12.5px; color: #64748b; background: #ffffff; padding: 8px 12px; border-radius: 8px; border: 1px dashed #cbd5e1;">
+            • <strong>[회사가 만든 문제]</strong>: 개인의 잘못이 아닌 조직의 시스템 결함이므로 절대로 자책하지 마세요.<br>
+            • <strong>[내가 취해야 할 태도]</strong>: 감정적 소진을 막고 내 마음의 평안을 지키기 위해 실천할 수 있는 현실적인 선 긋기 가이드입니다.
+          </div>
+        </div>
+
         <div class="cbt-details-card-list" id="cbt-top-cards-box"></div>
       </div>
 
@@ -1856,62 +1868,62 @@
     {
       id: "workload",
       name: "1. 업무량 및 납기 압박",
-      systemDesc: "인력 충원 없이 초과 업무를 방치하고 비현실적인 마감을 강요하는 조직적 과부하 구조",
-      individualDesc: "무리한 완벽주의를 내려놓고 물리적 가용 시간 내 작업량만 수용하는 단호한 쿼터제 설정"
+      systemDesc: "인력을 충분히 충원하지 않은 채 무리한 마감을 강요하고, 한 사람이 감당할 수 없는 과도한 업무량을 당연하게 방치하는 회사의 시스템 문제입니다.",
+      individualDesc: "‘내가 야근해서라도 끝내야지’라는 무리한 완벽주의를 내려놓으세요. 정규 근무 시간 안에 감당 가능한 양만 수용하고, 불가능한 일정은 미리 정중히 조정을 요청하세요."
     },
     {
       id: "autonomy",
       name: "2. 직무 자율성 결여",
-      systemDesc: "사소한 프로세스까지 통제하며 실무자의 재량권과 판단을 박탈하는 마이크로 매니지먼트",
-      individualDesc: "통제 불가능한 윗선의 승인 지연에 안달하지 않고, 내 권한 밖의 지체는 회사의 몫으로 인정"
+      systemDesc: "실무자의 전문성과 재량을 존중하지 않고, 사소한 일까지 사사건건 감시하고 통제하여 병목 현상을 유발하는 회사의 마이크로 매니지먼트 문제입니다.",
+      individualDesc: "내 권한 밖의 일이나 상사의 승인 지연 때문에 속태우지 마세요. 내 손을 떠난 지연은 회사의 몫으로 쿨하게 넘겨두고, 정해진 절차대로 보고만 마치시면 됩니다."
     },
     {
       id: "interpersonal",
       name: "3. 대인관계 및 태움/갈등",
-      systemDesc: "인격 모독, 뒷말, 군기 잡기 등 정서적 가해를 방치하거나 암묵적으로 조장하는 독성 조직 문화",
-      individualDesc: "상대의 감정 쓰레기통 역할을 단호히 거부하고, 대화의 목적을 순수 업무 사실로만 제한하는 정서 분리"
+      systemDesc: "직장 내 뒷말, 편가르기, 인격적인 무시나 폭언 등 정서적 괴롭힘을 방치하고 묵인하는 유해한 조직 문화의 문제입니다.",
+      individualDesc: "상대방의 분풀이나 감정 쓰레기통 역할을 단호히 거부하세요. 감정적인 비난에는 마음을 닫고, 오직 업무상의 객관적 사실(Fact)로만 드라이하게 소통하세요."
     },
     {
       id: "reward",
       name: "4. 보상 및 가치 절하",
-      systemDesc: "헌신과 전문성을 '당연한 것'으로 치부하고 최저 수준의 처우와 기여도 후려치기를 일삼는 착취 구조",
-      individualDesc: "내 인격적 가치를 회사의 평가에 의존하지 않으며, 주는 만큼만 일하고 이직·포트폴리오 자산화 준비"
+      systemDesc: "실무자의 헌신과 성과를 당연한 것으로 여기며, 적절한 인정이나 공정한 보상 없이 기여도를 깎아내리는 불합리한 보상 체계입니다.",
+      individualDesc: "내 소중한 자존감을 회사의 인색한 평가에 결코 맡기지 마세요. 받는 보상만큼만 적정하게 일하시고, 남는 에너지는 나 자신의 커리어와 성장에 투자하세요."
     },
     {
       id: "boundary",
       name: "5. 역할 모호성 및 독박 실무",
-      systemDesc: "명확한 R&R(역할과 책임) 부재로 책임감 있는 소수 실무자에게 타인의 업무가 부당하게 전가되는 결함",
-      individualDesc: "남이 던져둔 업무를 동정심으로 대신 치워주지 않고 담당자에게 공식적으로 에스컬레이션하기"
+      systemDesc: "누가 무엇을 해야 할지 명확한 업무 분장(R&R) 없이, 책임감 강하고 일 잘하는 실무자 한 사람에게 온갖 잡무와 책임을 떠넘기는 구조적 결함입니다.",
+      individualDesc: "동정심이나 죄책감 때문에 남이 미뤄둔 일을 대신 치워주지 마세요. 내 고유 업무가 아니라면 정중하게 거절하고, 담당자나 관리자에게 공식적으로 조정을 요청하세요."
     },
     {
       id: "emotional",
       name: "6. 감정 노동 및 표현 억압",
-      systemDesc: "부당한 고객/상사의 갑질 앞에서도 무조건적인 친절과 감정 희생을 강요하는 서비스 가스라이팅",
-      individualDesc: "서비스 멘트는 나의 영혼이 아닌 비즈니스 프로토콜(가면)일 뿐임을 인식하고, 내면과 철저히 분리"
+      systemDesc: "고객이나 거래처의 부당한 폭언, 갑질 앞에서도 직원을 보호해주지 않고 무조건적인 친절과 참을성만 강요하는 감정 착취 문제입니다.",
+      individualDesc: "업무 중 사용하는 친절 멘트는 내 진짜 마음이 아니라 ‘비즈니스용 가면’일 뿐입니다. 상대의 무례함을 내 영혼까지 들여놓지 마시고, 내면과 철저히 분리하세요."
     },
     {
       id: "support",
       name: "7. 지원 인프라 및 시스템 부재",
-      systemDesc: "업무에 필수적인 장비, 전산 매뉴얼, 교육 체계 없이 '알아서 해결하라'며 실무자 개인기에 의존",
-      individualDesc: "시스템 결함으로 인한 에러나 고객 불만을 내 탓으로 자책하지 않고 데이터로 시스템 미비를 보고"
+      systemDesc: "업무에 필수적인 매뉴얼, 전산 도구, 체계적인 교육 지원 없이 '알아서 잘하라'며 실무자 개인의 능력에만 의존하는 무책임한 업무 환경입니다.",
+      individualDesc: "도구나 매뉴얼이 없어서 터진 문제를 '내가 부족해서'라고 자책하지 마세요. \"현재 시스템상 이런 지원이 부족하여 발생한 문제입니다\"라고 사실대로 보고하세요."
     },
     {
       id: "security",
       name: "8. 고용 및 지위 불안정",
-      systemDesc: "인력을 언제든 대체 가능한 소모품으로 대우하며 상시적인 해고·계약 해지 공포를 조성하는 환경",
-      individualDesc: "조직에 대한 맹목적 충성을 거두고, 나만의 독립적 기술과 외부 시장 경쟁력을 축적하는 데 집중"
+      systemDesc: "구성원을 존중받는 동료가 아닌 언제든 버릴 수 있는 소모품처럼 취급하며, 늘 고용 불안과 위기감을 조장하는 조직 환경입니다.",
+      individualDesc: "회사에 맹목적인 충성을 바치며 불안해하지 마세요. 회사는 나의 평생을 책임져주지 않으므로, 어디서든 통하는 나만의 실력과 독립성을 기르는 데 집중하세요."
     },
     {
       id: "recovery",
       name: "9. 일-생활 경계 및 회복권 침해",
-      systemDesc: "퇴근 후 메신저 연락, 주말 무보상 출근, 휴가 사용 눈치주기 등 최소한의 뇌 휴식을 박탈하는 관행",
-      individualDesc: "퇴근 즉시 알림 차단 및 업무용 메신저 분리. 누워서 쉬는 시간을 사치가 아닌 필수 에너지원으로 보호"
+      systemDesc: "퇴근 후 업무 연락, 당연시되는 주말 근무, 휴가 쓰는 데 눈치 주는 분위기 등 직원의 쉴 권리를 존중하지 않는 악습입니다.",
+      individualDesc: "퇴근 후에는 업무 알림을 끄고 일과 나를 철저히 분리하세요. 멍때리고 쉬는 시간은 게으름이 아니라, 내 몸과 마음을 살리는 필수 회복 시간입니다."
     },
     {
       id: "fairness",
       name: "10. 절차적 불공정 및 불투명성",
-      systemDesc: "인사 평가와 기회 부여가 투명한 기준 없이 사내 파벌이나 윗선의 감정적 편애로 결정되는 부조리",
-      individualDesc: "불공정한 조직 내 인정을 얻기 위해 스스로를 갉아먹지 않고, 감정적 기대를 완전히 거두는 드라이한 태도"
+      systemDesc: "투명하고 객관적인 원칙 없이 사내 파벌이나 윗선의 주관적인 친분에 따라 기회와 평가가 좌우되는 불공정한 조직의 문제입니다.",
+      individualDesc: "불공정한 사내 기준에서 인정받으려고 나를 깎아내리지 마세요. 조직에 대한 감정적인 기대를 거두고, 나만의 원칙을 지키며 담담하게 내 페이스를 유지하세요."
     }
   ];
 
@@ -2195,13 +2207,14 @@
   var currentCalculatedFactors = [];
   var currentMyShare = 14;
 
-  // CBT 모달 텍스트 실시간 동기화 (진단 결과 기반 동적 렌더링)
+  // CBT 모달 텍스트 실시간 동기화 (진단 결과 기반 동적 렌더링 + 직관적인 존댓말 적용)
   function updateCbtModalContent() {
     var orgShare = 100 - currentMyShare;
     var box1 = document.getElementById('cbt-modal-box-1');
     if (box1) {
-      box1.innerHTML = '<strong>1. 인지적 왜곡(개인화 오류) 교정</strong><br>' +
-        '진단 문항에서 도출된 높은 점수는 모든 업무의 부하와 실패를 \'내 탓\'으로 여기는 과잉 책임 경향을 나타냅니다. 심리학적 객관화를 위해 내 몫의 실행 판단 지분(' + currentMyShare + '%)을 제외한 나머지 ' + orgShare + '%의 부하는 온전히 외생 변수로 분리했습니다.';
+      box1.innerHTML = '<strong>1. \"다 내 탓이야\"라는 생각에서 벗어나기 (자책 교정)</strong><br>' +
+        '진단 문항에서 높은 점수가 나온 이유는, 업무 중 일어나는 문제와 스트레스를 <em>\'내가 일을 못해서\', \'내가 너무 예민해서\'</em>라며 혼자 짐을 떠안는 자책 경향 때문입니다.<br>' +
+        '심리학적으로 냉정하게 분리해 보면, 내가 실제로 판단을 잘못했거나 실수한 비중은 <strong>' + currentMyShare + '%</strong>에 불과합니다. 나머지 <strong>' + orgShare + '%</strong>는 온전히 회사의 시스템과 환경이 만들어낸 문제입니다. 결코 스스로를 탓하지 마세요.';
     }
 
     var box2 = document.getElementById('cbt-modal-box-2');
@@ -2211,9 +2224,10 @@
         var extOnly = currentCalculatedFactors.filter(function(f) { return !f.mine; });
         top3Titles = extOnly.slice(0, 3).map(function(f) { return f.title; });
       }
-      var top3Text = top3Titles.length > 0 ? top3Titles.join(', ') : '직장 내 만성적 인력 부족, 표준 매뉴얼 미비, 상위 부서의 비현실적 일정 배분';
-      box2.innerHTML = '<strong>2. 조직 및 환경적 외생 변수 반영</strong><br>' +
-        top3Text + ' 등 개인의 의지로 통제할 수 없는 9대 직무 변수가 전체 문제 유발 요인의 대부분(' + orgShare + '%)을 차지함을 시각화하여, 자책감을 덜고 합리적인 문제 해결에 집중하도록 유도합니다.';
+      var top3Text = top3Titles.length > 0 ? top3Titles.join(', ') : '만성적인 현장 인력 결원 및 지원 부족, 조직의 표준 프로세스 및 매뉴얼 미비, 상위 부서의 비현실적 일정 배분';
+      box2.innerHTML = '<strong>2. 회사가 만든 문제(환경적 요인)를 객관적으로 보기</strong><br>' +
+        top3Text + ' 등은 개인의 노력이나 의지만으로는 바꿀 수 없는 <strong>회사의 구조적 결함</strong>입니다.<br>' +
+        '전체 문제 유발 요인의 대부분(' + orgShare + '%)을 이러한 회사 측 요인이 차지하고 있습니다. 회사를 당장 바꿀 수 없다면, 회사의 문제를 내 몸으로 때우려 하지 마시고 <strong>나 자신을 보호하는 단단한 심리적 경계선</strong>을 그어주셔야 합니다.';
     }
   }
 
@@ -2365,11 +2379,11 @@
           '</div>' +
           '<div class="cbt-deep-body">' +
           '<div class="cbt-col-item cbt-col-system">' +
-          '<strong>[조직의 구조적 결함] (자책 금지)</strong>' +
+          '<strong>[회사가 만든 문제] (자책하지 마세요)</strong>' +
           item.systemDesc +
           '</div>' +
           '<div class="cbt-col-item cbt-col-individual">' +
-          '<strong>[나의 심리적 보호 경계] (개인 권한)</strong>' +
+          '<strong>[내가 취해야 할 태도] (나를 지키는 선 긋기)</strong>' +
           item.individualDesc +
           '</div>' +
           '</div>';
@@ -2407,12 +2421,16 @@
       ''
     ];
 
+    lines.push('[책임 재구조화 핵심 메시지]');
+    lines.push('“지금 겪는 고통은 당신이 부족해서가 아니라 회사의 시스템 문제이며, 회사를 바꿀 수 없다면 나 자신을 지키는 선을 그어야 합니다.”');
+    lines.push('');
+
     if (topThreeFactors && topThreeFactors.length > 0) {
-      lines.push('[상위 취약 변수 책임 재구조화 가이드]');
+      lines.push('[상위 취약 직무 변수 : 회사의 문제 vs 내가 취할 태도]');
       topThreeFactors.forEach(function(it, i) {
         lines.push((i + 1) + '. ' + it.name + ' (부하도 ' + it.pct + '%)');
-        lines.push('   - [조직의 구조적 결함]: ' + it.systemDesc);
-        lines.push('   - [나의 심리적 보호 경계]: ' + it.individualDesc);
+        lines.push('   - [회사가 만든 문제]: ' + it.systemDesc);
+        lines.push('   - [내가 취해야 할 태도]: ' + it.individualDesc);
       });
       lines.push('');
     }
@@ -2557,14 +2575,14 @@
 
       ctx.fillStyle = "#9f1239";
       ctx.font = "bold 12.5px -apple-system, sans-serif";
-      ctx.fillText("[조직의 구조적 결함]:", 60, curY + 56);
+      ctx.fillText("[회사가 만든 문제 : 자책 금지]", 60, curY + 56);
       ctx.fillStyle = "#4c0519";
       ctx.font = "12.5px -apple-system, sans-serif";
       wrapCanvasText(ctx, item.systemDesc, 60, curY + 76, w - 120, 18);
 
       ctx.fillStyle = "#065f46";
       ctx.font = "bold 12.5px -apple-system, sans-serif";
-      ctx.fillText("[나의 심리적 보호 경계]:", 60, curY + 104);
+      ctx.fillText("[내가 취해야 할 태도 : 선 긋기]", 60, curY + 104);
       ctx.fillStyle = "#064e3b";
       ctx.font = "12.5px -apple-system, sans-serif";
       wrapCanvasText(ctx, item.individualDesc, 60, curY + 124, w - 120, 18);
